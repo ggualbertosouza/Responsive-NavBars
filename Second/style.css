@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+body{
+    background-color: #fefefe;
+}
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: #11101b;
+    color: #fefefe;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.hamburguer{
+    display: none;
+}
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    display: block;
+    color: #fefefe;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    transition: .2s;
+    margin: 0 0.3rem;
+}
+.nav-bar ul li a:hover{
+    background-color: #fefefe;
+    color: #11101b;
+}
+.nav-bar ul li a.active{
+    background-color: #fefefe;
+    color: #11101b;    
+}
+
+/* Media queries: breakpoints */
+@media only screen and (max-width: 900px){
+    header{
+        padding: 0 3%;
+    }
+    .hamburguer{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburguer .line{
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+    .nav-bar{
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        right: 0;
+        height: 0;
+        width: 100vw;
+        background-color: #11101b;
+        transition: .2s;
+        overflow: hhidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: .5s;
+        opacity: 0;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+}
+
