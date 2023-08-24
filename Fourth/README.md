@@ -1,3 +1,6 @@
+NavBar responsiva - Usado como base https://www.youtube.com/watch?v=YELPZw5ieHQ&t=3216s
+
+
 ## Aprendizados
 
 - Usar "NAVLINK" do React router dom
