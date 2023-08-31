@@ -88,13 +88,14 @@ export default function SideBar() {
 
         {/* Menus */}
         <div className="flex flex-col h-full">
-          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 font-medium overflow-x-hidden">
+          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 font-medium overflow-x-hidden h-[70%] max-h-[68%]">
             <li>
               <NavLink to={"/"} className={"link"}>
                 <AiOutlineAppstore size={23} className="min-w-max" />
                 All Apps
               </NavLink>
             </li>
+
             <li>
               <NavLink to={"/authentication"} className={"link"}>
                 <BsPerson size={23} className="min-w-max" />
@@ -122,8 +123,17 @@ export default function SideBar() {
             )}
           </ul>
         </div>
-
-        <div></div>
+        {isOpen && (
+          <div className="flex-1 text-sm z-50 max-h-48 my-auto whitespace-pre w-full font-medium ">
+            <div className="flex items-center justify-between border-y border-slate-300 p-4 ">
+              <div>
+                <p>Spark</p>
+                <small>No-cost $0/month</small>
+              </div>
+              <p>Upgrade</p>
+            </div>
+          </div>
+        )}
 
         {/* Button */}
         <motion.div

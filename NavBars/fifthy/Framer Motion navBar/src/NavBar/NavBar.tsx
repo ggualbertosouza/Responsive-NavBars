@@ -4,6 +4,10 @@ import { NavStyle } from "./style";
 export default function NavBar() {
   const [menu, toggleMenu] = useCycle(false, true);
 
+
+  const framerAnimation = {
+    var 
+  }
   return (
     <NavStyle>
       <header>
